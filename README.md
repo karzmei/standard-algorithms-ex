@@ -1,6 +1,6 @@
-# standard-algorithms-ex
-Writing some standard graph/tree related algorithms (for exercise purposes).
-So far, there is:
+# Coding some classic algorithms and exercises for practice purposes!
+Some classics:
 - binary search tree
 - a binary min-heap
 - graph BFS algorithm
+- merge sort
