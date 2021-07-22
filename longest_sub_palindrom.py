@@ -66,7 +66,7 @@ def fixed_length_palindrom(s, w_len):
     found = False
     exm = ""
     i = 0
-    while (found == False) and (i < len(s) - w_len) :
+    while (not found) and (i < len(s) - w_len) :
         if is_palindrom(s[i:i+w_len]):
             found = True
             exm = s[i:i+w_len]
