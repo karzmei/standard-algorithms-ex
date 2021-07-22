@@ -18,7 +18,7 @@ class binary_min_heap (object):
 		
 		j = self.length - 1 # current index of the inserted value
 		finished = False
-		while (j > 0) and (finished == False):
+		while (j > 0) and (not finished):
 			if (j % 2 == 0):
 				par_i = (j-2) // 2	# the parent index
 			else:	# j is odd
