@@ -11,24 +11,24 @@ class binary_search_tree (object) :
 
 
 	def insert(self, val):
-		if (self.val is None) :
+		if (not self.val) :
 			self.val = val
 		else:
 			cur_val = self.val
 			if (cur_val > val) :
-				if self.left_ch is None:
+				if not self.left_ch:
 					self.left_ch = binary_search_tree(val)
 				else:
 					self.left_ch.insert(val)
 			else:
-				if self.right_ch is None:
+				if not self.right_ch:
 					self.right_ch = binary_search_tree(val)
 				else:
 					self.right_ch.insert(val)
 
 	def display_ascend(self):
 		# displaying left-center-right bottom-up
-		if (self.val is None):
+		if (not self.val):
 			print('[empty]')
 		else:
 			if self.left_ch :
@@ -39,7 +39,7 @@ class binary_search_tree (object) :
 
 	def sorted_list(self):
 		# going left-center(root)-right, bottom-up
-		if self.val is None:
+		if not self.val:
 			return []
 		else:
 			sorted_l = []
@@ -51,20 +51,19 @@ class binary_search_tree (object) :
 			return sorted_l
 
 	def smallest(self):
-		if self.left_ch is None:
+		if not self.left_ch:
 			return self.val
 		else:
 			return self.left_ch.smallest()
 
 
 	def largest(self):
-		if self.right_ch is None:
+		if not self.right_ch:
 			return self.val
 		else:
 			return self.right_ch.largest()
 
 	def contains_value(self, q_val):
-		# returns True if the tree contains value, otherwise returns False.
 		if self.val :
 			if (self.val == q_val):
 				return True
