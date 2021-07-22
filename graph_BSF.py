@@ -11,7 +11,7 @@ import math
 
 class dgraph (object):
 	def __init__(self, vertices = None):
-		if vertices == None:
+		if not vertices:
 			vertices = set()
 		self.__vertices = vertices
 		self.__outgoing = {vertex: {} for vertex in vertices}
