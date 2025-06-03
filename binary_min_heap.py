@@ -13,7 +13,10 @@ class binary_min_heap (object):
 		self.heap_list[j] = temp
 
 	def insert(self, val):
-		self.heap_list.append(val)
+		if self.length < len(self.heap_list):
+            		self.heap_list[self.length] = val
+        	else:
+            		self.heap_list.append(val)
 		self.length += 1
 		
 		j = self.length - 1 # current index of the inserted value
